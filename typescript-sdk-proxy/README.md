@@ -12,7 +12,7 @@ The typed client, [`@browz/sdk`](https://www.npmjs.com/package/@browz/sdk), end 
    follow the proxy's exit;
 4. starts it with `browz.browser.start()` and reports any `coherenceWarnings`;
 5. opens a page with `browz.browser.navigate()`;
-6. saves a screenshot through `POST /api/v1/browser/screenshot` (the SDK has no wrapper for it yet);
+6. saves a screenshot through `POST /api/v1/browser/screenshot`, with the same credentials;
 7. stops the profile, deletes and purges it, and removes the proxy it added.
 
 ## Prerequisites
@@ -40,9 +40,9 @@ BROWZ_PROXY='http://user:pass@proxy.example.net:8000' npm start
 Run on 12 Nov 2026 against Browz 0.1.8 with `@browz/sdk` 0.2.0 from npm, through a local test proxy
 (the proxy saw the profile's 17 HTTPS connections); `npm run typecheck` passes.
 
-## Limits
+## Good to know
 
 - A proxy is checked when the profile starts; a dead or refusing proxy makes the start fail with
   Browz's message (caught as `BrowzError`).
 - `cdpEndpoint` is there for Playwright or Puppeteer (see [playwright-cdp](../playwright-cdp/)).
-- Use it only on sites whose terms allow automated access. Browz does not solve CAPTCHAs.
+- Use it only on sites whose terms allow automated access. A person completes CAPTCHAs; Browz never solves them.

@@ -49,7 +49,7 @@ BROWZ_PROXY_A=px… BROWZ_PROXY_B=px… node index.mjs
 
 Run on 12 Nov 2026 against Browz 0.1.8 (headless agent, scratch data folder).
 
-## Limits
+## Good to know
 
 - **Only where the site allows it.** Many sites limit how many accounts one person may hold, or
   forbid automated sign-ups. Browz's acceptable use policy forbids creating accounts a platform

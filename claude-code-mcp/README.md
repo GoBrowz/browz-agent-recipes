@@ -54,12 +54,12 @@ Claude Code calls `browz_session_open`, `browz_navigate`, `browz_snapshot`, `bro
 Verified on 12 Nov 2026 with Claude Code 2.1 and Browz 0.1.8 (the server bundled in the app,
 against a scratch data folder).
 
-## Limits
+## Good to know
 
-- Sessions at once are capped by your plan (Free 2, Pro 20 5, and so on; see
+- Your plan sets how many sessions run at once (Free 2, Pro 20 5, and so on; see
   [sessions](https://gobrowz.com/docs/ai-agents)). Close sessions you are done with; an ephemeral
   session left open is wiped after `ttlMinutes` (default one day).
 - A session with no proxy uses this computer's IP. Pass `"proxy": "pool"` (or a `proxyId`) to
   `browz_session_open` to give each task its own exit.
-- Browz does not solve CAPTCHAs. When a page asks for a person, the agent hands the window to you.
+- A person completes CAPTCHAs; Browz never solves them. When a page asks for a person, the agent hands the window to you.
 - Use it only on sites whose terms allow automated access.

@@ -39,9 +39,9 @@ node index.mjs
 
 Run on 12 Nov 2026 against Browz 0.1.8 (headless agent, scratch data folder).
 
-## Limits
+## Good to know
 
 - `puppeteer-core` is pinned to the reviewed version (25.5.0).
 - `page.evaluate()` and `page.$()` run script in the page; prefer plain navigation and input where
   you can.
-- Use it only on sites whose terms allow automated access. Browz does not solve CAPTCHAs.
+- Use it only on sites whose terms allow automated access. A person completes CAPTCHAs; Browz never solves them.

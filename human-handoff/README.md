@@ -1,8 +1,8 @@
 # Human in the loop: the agent asks you to sign in, then carries on
 
-An agent meets a sign-in page, a verification code or a CAPTCHA. It does not type your password and
-does not try to solve the check: it hands the live Browz window to you with `browz_request_human`,
-waits, and continues in the same session once you are done.
+An agent meets a sign-in page, a verification code or a CAPTCHA. You handle it: the agent hands the
+live Browz window to you with `browz_request_human`, waits, and continues in the same session once
+you are done. Your password stays with you.
 
 ## What it does
 
@@ -56,14 +56,14 @@ snapshot after         signed in: "Welcome back"
 Run on 12 Nov 2026 against Browz 0.1.8 on a Mac with a window; the sign-in was typed into the tab by
 a test stand-in for the person.
 
-## Limits
+## Good to know
 
-- The profile must have a window. A headless profile (and every profile under `browz-mcp serve`) is
-  refused: "this profile is running headless, so nobody can see its window".
+- Hand-offs use a profile with a window. For a headless profile (and every profile under
+  `browz-mcp serve`) the call answers "this profile is running headless, so nobody can see its window".
 - If nobody finishes within `timeoutSec`, the call ends as an error (`timed_out`); **Cancel** ends it
   as `cancelled`. Ask again or end the session.
 - Over the hosted server (`mcp.gobrowz.com`) one call waits about 70 s and returns
   `state: "waiting"` with a `handoffId`; call again with it to keep waiting.
-- Browz never gives the agent your passwords or codes and does not solve CAPTCHAs. For sign-ins you
-  want automated, store them in Browz and let the agent fill them by reference with
-  `browz_credential_fill`; the agent still never sees the secret.
+- Your passwords and codes stay in Browz: the agent never sees them. A person completes CAPTCHAs; Browz never solves them. For sign-ins
+  you want automated, store them in Browz and let the agent fill them by reference with
+  `browz_credential_fill`; the secret stays in Browz.

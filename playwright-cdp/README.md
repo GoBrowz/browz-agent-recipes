@@ -44,11 +44,11 @@ BROWZ_TEST_URL=https://example.org/ node index.mjs
 
 Run on 12 Nov 2026 against Browz 0.1.8 (headless agent, scratch data folder).
 
-## Limits
+## Good to know
 
 - `playwright-core` is pinned to the version Browz reviews (1.61.1, see the automation
-  compatibility contract). Other versions usually work over CDP but are not checked.
+  compatibility contract).
 - `page.evaluate()` runs script in the page. For reading and clicking, Playwright locators are
   fine; Browz's own `browz_snapshot`/`browz_act` (MCP) and `/api/v1/browser/snapshot`/`act` (REST)
   read and act without running any script in the page.
-- Use it only on sites whose terms allow automated access. Browz does not solve CAPTCHAs.
+- Use it only on sites whose terms allow automated access. A person completes CAPTCHAs; Browz never solves them.

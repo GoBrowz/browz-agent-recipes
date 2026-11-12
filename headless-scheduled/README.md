@@ -69,15 +69,15 @@ Run on 12 Nov 2026 against `browz-mcp serve` from Browz 0.1.8 on macOS (scratch 
 URLs, both sessions `cleaned`). The systemd units were checked with `systemd-analyze verify` on
 Ubuntu 24.04; the plist with `plutil -lint`.
 
-## Limits
+## Good to know
 
-- Headless profiles cannot hand a window to a person: there is no `browz_request_human` here. A
-  task that needs a sign-in should use a persistent identity signed in beforehand, or a stored
-  sign-in (`browz_credential_fill`).
+- For a task that needs a sign-in, use a persistent identity signed in beforehand, or a stored
+  sign-in (`browz_credential_fill`). Hand-offs to a person (`browz_request_human`) use a profile
+  with a window, as in [human-handoff](../human-handoff/).
 - `serve` listens on loopback. To reach it from other machines, put a TLS reverse proxy in front and
   pass `--allowed-host <name>`; never serve plain HTTP beyond the machine.
-- Not signed in to a Browz account, the local agent has no session cap and nothing is metered.
-  Signed in, the plan's cap on sessions at once applies (Free 2, Pro 20 5, …).
+- Not signed in to a Browz account, the local agent runs any number of sessions, unmetered.
+  Signed in, your plan sets how many sessions run at once (Free 2, Pro 20 5, …).
 - Give scheduled jobs their own local agent key (`browz-mcp agent-token create --profiles own …`)
   instead of the server's token.
-- Use it only on sites whose terms allow automated access. Browz does not solve CAPTCHAs.
+- Use it only on sites whose terms allow automated access. A person completes CAPTCHAs; Browz never solves them.

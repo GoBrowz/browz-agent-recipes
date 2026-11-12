@@ -6,7 +6,7 @@ these recipes show the ways in: the MCP server, the hosted MCP server, the Local
 OpenAPI 3.1), the TypeScript SDK, and CDP for Playwright and Puppeteer.
 
 Every folder is a small complete project with its own README: what it does, prerequisites, how to run
-it, the output to expect, and its limits.
+it, the output to expect, and what is good to know.
 
 | Recipe | Shows | Uses | Checked |
 |---|---|---|---|
@@ -38,14 +38,15 @@ folder, using only our own demo pages, `example.com` and `example.org`.
 - Use Browz only where each site's terms allow it, and within Browz's acceptable use policy
   ([gobrowz.com/acceptable-use](https://gobrowz.com/acceptable-use)): no fraud, no accounts a
   platform forbids, no returning after a ban, no fake engagement.
-- Browz does not solve CAPTCHAs and never hands an agent your passwords or codes. When a page needs a
-  person, the agent asks you ([human-handoff](human-handoff/)).
+- A person completes CAPTCHAs; Browz never solves them. Your passwords and codes stay in Browz and
+  the agent never sees them. When a page needs a person, the agent asks you ([human-handoff](human-handoff/)).
 - Give each agent its own local agent key with only the scopes, profiles and sites it needs, rather
   than the owner's token.
 
 ## Questions and issues
 
-Open an issue in this repository, or write to support@gobrowz.com. Each recipe folder is
+Open an issue in this repository, or reach Browz support from the app (Settings › Help and support)
+or [gobrowz.com/help](https://gobrowz.com/help.html#contact). Each recipe folder is
 self-contained: copy one into your own project and change it as you like.
 
 ## Licence

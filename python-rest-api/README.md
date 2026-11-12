@@ -58,9 +58,9 @@ python3 browz_rest.py --url https://example.org/ --out page.png --keep
 
 Run on 12 Nov 2026 with Python 3.9 against Browz 0.1.8 (headless agent, scratch data folder).
 
-## Limits
+## Good to know
 
 - The Local API listens on loopback only (127.0.0.1); run the script on the same computer as Browz.
 - Give a script less than the owner's token: a local agent key (`blcl_…`) limits it to some
   profiles, sites and scopes (Browz app: Settings › AI agents).
-- Use it only on sites whose terms allow automated access. Browz does not solve CAPTCHAs.
+- Use it only on sites whose terms allow automated access. A person completes CAPTCHAs; Browz never solves them.

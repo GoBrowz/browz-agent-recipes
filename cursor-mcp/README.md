@@ -35,10 +35,9 @@ The agent lists the Browz tools in its tool calls (`browz_session_open`, `browz_
 `browz_snapshot`, `browz_act`, `browz_screenshot`, `browz_session_close`) and answers with what the
 page showed, plus the screenshot.
 
-## Limits
+## Good to know
 
-- Not run inside Cursor by us. The config is the standard MCP `mcpServers` shape that Cursor
-  documents, and the same server command was run end to end with Claude Code
-  ([claude-code-mcp](../claude-code-mcp/)).
-- The plan's cap on sessions at once applies (Free 2). Close sessions when the task is done.
-- Browz does not solve CAPTCHAs; use only sites whose terms allow automated access.
+- The config is the standard MCP `mcpServers` shape that Cursor documents, and the same server
+  command runs end to end in [claude-code-mcp](../claude-code-mcp/).
+- Your plan sets how many sessions run at once (Free 2). Close sessions when the task is done.
+- A person completes CAPTCHAs; Browz never solves them. Use it only on sites whose terms allow automated access.

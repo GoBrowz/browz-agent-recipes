@@ -63,13 +63,15 @@ against Browz 0.1.8's `browz-mcp serve` over HTTP with a bearer token (`"tools":
 local server's count). It was not run against the hosted server itself, and the model path was not
 run; it is the SDK's standard `Agent` + `Runner` usage.
 
-## Limits
+## Good to know
 
-- The hosted server is a free public beta. Without a paid plan an account gets 2 hosted sessions at
+- The hosted server is a free public beta. On the Free plan an account gets 2 hosted sessions at
   once, 2,000 actions and 300 relay minutes a month, and 30 tool calls a minute per connection.
-  When a limit is hit, the tool result says how long to wait.
-- Remote tools leave out cookies, JavaScript (`browz_evaluate`) and downloads, and
-  `browz_session_open` is local only; this recipe uses only tools the remote server offers.
+  When an allowance is used up, the tool result says how long to wait.
+- The hosted server offers the profile, page and hand-off tools this recipe uses (`browz_navigate`,
+  `browz_snapshot`, `browz_act`, `browz_screenshot`, `browz_request_human`, …). Cookies, JavaScript
+  (`browz_evaluate`), downloads and `browz_session_open` run on the local server
+  ([claude-code-mcp](../claude-code-mcp/)).
 - Page snapshots, screenshots and typed text pass through our server encrypted and are deleted after
   7 days; the action log (tool, profile, page origin and path, outcome) is kept 90 days.
-- Browz does not solve CAPTCHAs. Use it only where each site's terms allow automated access.
+- A person completes CAPTCHAs; Browz never solves them. Use it only where each site's terms allow automated access.
