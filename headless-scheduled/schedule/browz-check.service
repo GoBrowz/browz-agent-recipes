@@ -1,0 +1,14 @@
+# /etc/systemd/system/browz-check.service: one run of the check. Started by browz-check.timer.
+# Needs browz-mcp.service (docs/agents/headless.md, "As a systemd service") running on this machine.
+[Unit]
+Description=Browz scheduled headless check
+Wants=browz-mcp.service
+After=browz-mcp.service
+
+[Service]
+Type=oneshot
+User=browz
+WorkingDirectory=/opt/browz-recipes/headless-scheduled
+Environment=BROWZ_MCP_TOKEN_FILE=/home/browz/.browz-mcp-token
+Environment=OUT_DIR=/var/lib/browz-checks
+ExecStart=/usr/bin/node run.mjs https://example.com/

@@ -1,0 +1,17 @@
+{
+  "name": "browz-recipe-human-handoff",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Human in the loop: an MCP agent hands a Browz window to a person for sign-in, then continues",
+  "scripts": {
+    "start": "node index.mjs",
+    "check": "node --check index.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

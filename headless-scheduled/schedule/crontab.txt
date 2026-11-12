@@ -1,0 +1,3 @@
+# Every day at 06:00: the scheduled check, against the `serve` agent on this machine.
+# crontab -e, then paste (adjust the paths). cron's PATH is short, so name node in full.
+0 6 * * * cd /opt/browz-recipes/headless-scheduled && BROWZ_MCP_TOKEN_FILE=$HOME/.browz-mcp-token OUT_DIR=/var/lib/browz-checks /usr/bin/node run.mjs https://example.com/ >> /var/log/browz-check.log 2>&1

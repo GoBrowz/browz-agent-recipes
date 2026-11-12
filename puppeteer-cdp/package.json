@@ -1,0 +1,17 @@
+{
+  "name": "browz-recipe-puppeteer-cdp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Puppeteer attached over CDP to a Browz profile",
+  "scripts": {
+    "start": "node index.mjs",
+    "check": "node --check index.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "25.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

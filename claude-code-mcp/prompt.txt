@@ -1,0 +1,1 @@
+Using Browz, in one isolated session of its own: open https://example.com, tell me the page title and the text of its only link, take a screenshot, then close the session.

@@ -1,0 +1,14 @@
+{
+  "name": "browz-recipe-two-accounts-side-by-side",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Two Browz profiles signed in to the same site at once, each with its own cookies and storage",
+  "scripts": {
+    "start": "node index.mjs",
+    "check": "node --check index.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

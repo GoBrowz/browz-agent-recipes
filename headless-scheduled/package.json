@@ -1,0 +1,17 @@
+{
+  "name": "browz-recipe-headless-scheduled",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A scheduled headless check through browz-mcp serve: one isolated session per URL",
+  "scripts": {
+    "start": "node run.mjs",
+    "check": "node --check run.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

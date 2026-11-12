@@ -1,0 +1,15 @@
+---
+description: Use Browz for any task that opens a web page (checking a deploy, reproducing a bug, reading docs behind a sign-in)
+alwaysApply: false
+---
+
+# Browsing with Browz
+
+Open web pages only through the Browz MCP tools (`browz_*`), never with a shell command or a browser you start yourself.
+
+- One task, one isolated browser: `browz_session_open` with a short `task`, then use the returned `profileId` as `id` in the page tools, and finish with `browz_session_close` (an ephemeral session is wiped then).
+- To test a local dev server, open it by its `http://127.0.0.1:<port>` or `http://localhost:<port>` address.
+- Read with `browz_snapshot`; act with `browz_act` on its refs (`e12`); take a new snapshot after each navigation; `browz_wait` for text or a URL instead of sleeping.
+- `browz_screenshot` when the layout matters (a visual bug, a broken image).
+- `NEEDS A PERSON` in a snapshot (sign-in, verification code, CAPTCHA): call `browz_request_human` and wait. Never type a password or code, never try to solve a CAPTCHA.
+- Use only sites whose terms allow automated access.

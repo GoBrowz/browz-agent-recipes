@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- macOS: ~/Library/LaunchAgents/com.example.browz-check.plist, then
+     launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.example.browz-check.plist
+     Replace /Users/you with your home folder: launchd does not expand ~ or $HOME. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.example.browz-check</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/homebrew/bin/node</string>
+    <string>run.mjs</string>
+    <string>https://example.com/</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/you/browz-recipes/headless-scheduled</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>BROWZ_MCP_TOKEN_FILE</key><string>/Users/you/.browz-mcp-token</string>
+    <key>OUT_DIR</key><string>/Users/you/browz-checks</string>
+  </dict>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>0</integer></dict>
+  <key>StandardOutPath</key><string>/Users/you/browz-checks/last-run.log</string>
+  <key>StandardErrorPath</key><string>/Users/you/browz-checks/last-run.log</string>
+</dict>
+</plist>

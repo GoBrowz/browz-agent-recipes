@@ -1,0 +1,17 @@
+{
+  "name": "browz-recipe-playwright-cdp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Playwright attached over CDP to a Browz profile",
+  "scripts": {
+    "start": "node index.mjs",
+    "check": "node --check index.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.61.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

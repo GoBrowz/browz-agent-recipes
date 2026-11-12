@@ -1,0 +1,14 @@
+# /etc/systemd/system/browz-check.timer
+#   sudo systemctl daemon-reload && sudo systemctl enable --now browz-check.timer
+#   systemctl list-timers browz-check.timer        # next run
+#   journalctl -u browz-check.service              # output of past runs
+[Unit]
+Description=Run the Browz check every day at 06:00
+
+[Timer]
+OnCalendar=*-*-* 06:00:00
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target
