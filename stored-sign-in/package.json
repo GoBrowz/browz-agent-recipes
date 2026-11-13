@@ -1,0 +1,18 @@
+{
+  "name": "browz-recipe-stored-sign-in",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An AI agent signs in with a password and one-time code stored in Browz, without seeing either",
+  "scripts": {
+    "site": "node demo-site.mjs",
+    "start": "node agent.mjs",
+    "check": "node --check demo-site.mjs && node --check agent.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -5,3 +5,5 @@ dist/
 out/
 .env
 *.png
+agent-key
+secrets

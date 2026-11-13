@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "browz": {
+      "command": "npx",
+      "args": ["-y", "@browz/mcp"],
+      "env": { "BROWZ_LOCAL_AGENT_TOKEN_FILE": "${BROWZ_AGENT_KEY_FILE}" }
+    }
+  }
+}

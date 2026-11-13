@@ -19,6 +19,7 @@ it, the output to expect, and what is good to know.
 | [python-rest-api](python-rest-api/) | The whole loop from Python with the standard library | Local API (REST) | ran |
 | [two-accounts-side-by-side](two-accounts-side-by-side/) | Two accounts a site allows, signed in at once, kept apart | Local API snapshot + act | ran |
 | [human-handoff](human-handoff/) | The agent hands the window to you for a sign-in, then carries on | local MCP, `browz_request_human` | ran (headed Mac) |
+| [stored-sign-in](stored-sign-in/) | The agent signs in with a password and one-time code stored in Browz, and never sees them | local MCP with an agent key, `browz_credential_fill` | ran (0.1.9, script and Claude Code) |
 | [headless-scheduled](headless-scheduled/) | A scheduled job on a server: one wiped session per page | `browz-mcp serve`, cron/systemd/launchd | ran |
 
 "Ran" means the recipe was run end to end against Browz 0.1.8 on 12 Nov 2026, against a scratch data

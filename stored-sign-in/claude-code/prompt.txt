@@ -1,0 +1,1 @@
+Using Browz profile {PROFILE}: start it, open {URL}/login and sign in with the sign-in stored in Browz for that site (it may ask for a verification code next). Tell me the heading of the page you reach after signing in, then stop the profile.
