@@ -56,7 +56,7 @@ against a scratch data folder).
 
 ## Good to know
 
-- Your plan sets how many sessions run at once (Free 2, Pro 20 5, and so on; see
+- Your plan sets how many sessions run at once (2 on Free, 5 on Pro 20, and more on larger plans; see
   [sessions](https://gobrowz.com/docs/ai-agents)). Close sessions you are done with; an ephemeral
   session left open is wiped after `ttlMinutes` (default one day).
 - A session with no proxy uses this computer's IP. Pass `"proxy": "pool"` (or a `proxyId`) to

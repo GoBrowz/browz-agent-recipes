@@ -77,7 +77,7 @@ Ubuntu 24.04; the plist with `plutil -lint`.
 - `serve` listens on loopback. To reach it from other machines, put a TLS reverse proxy in front and
   pass `--allowed-host <name>`; never serve plain HTTP beyond the machine.
 - Not signed in to a Browz account, the local agent runs any number of sessions, unmetered.
-  Signed in, your plan sets how many sessions run at once (Free 2, Pro 20 5, …).
+  Signed in, your plan sets how many sessions run at once (2 on Free, 5 on Pro 20, and more on larger plans).
 - Give scheduled jobs their own local agent key (`browz-mcp agent-token create --profiles own …`)
   instead of the server's token.
 - Use it only on sites whose terms allow automated access. A person completes CAPTCHAs; Browz never solves them.
